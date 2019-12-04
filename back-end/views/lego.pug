@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        title #{title}
+        link(rel='stylesheet', href='/css/lego.css')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet")
+    body
+        .lego
+            div.img-lego(style=`background: url('/img/${lego.coverImg}') top center no-repeat; background-size: cover;`)
+            h1 #{lego.setName}
+            h3 number: #{lego.setNumber}
+            h3 theme: #{lego.setTheme}
+            h3 year: #{lego.year}
+        
+        hr
+
+        .istruzioni
+            h1 INSTRUCTIONS
+            img(src=`/img/istruzioni/${lego.istruzione1}`)
+            img(src=`/img/istruzioni/${lego.istruzione2}`)
+            img(src=`/img/istruzioni/${lego.istruzione3}`)
+        

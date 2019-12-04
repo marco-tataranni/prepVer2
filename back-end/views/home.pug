@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        title #{title}
+        link(rel='stylesheet', href='/css/style.css')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet")
+    body
+        .container-lego
+            each lego in legos
+                .lego
+                    div.img-lego(style=`background: url('/img/${lego.coverImg}') top center no-repeat; background-size: cover;`)
+                    h1 #{lego.setName}
+                    a(href=`/istruzioni?setNumber=${lego.setNumber}`) VIEW LEGO
+                
